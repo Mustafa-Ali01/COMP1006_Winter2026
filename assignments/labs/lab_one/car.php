@@ -13,7 +13,9 @@ class car {
         $this->year = $year;
     }
 
-    
+    public function PullCarDetails() {
+        return "Car Details: " . $this->year . " " . $this->make . " " . $this->model;
+    }
 
 }
 ?>
