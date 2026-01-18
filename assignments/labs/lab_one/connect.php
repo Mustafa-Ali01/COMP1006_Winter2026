@@ -2,20 +2,20 @@
 $host = 'localhost'; 
 $db   = 'week_two'; 
 $user = 'root';        
-$pass = ' ';            
+$pass = ''; 
 
-//points to the database
+// Points to the database
 $dsn = "mysql:host=$host;dbname=$db";
 
-//trying to connect to datbaase
+// Trying to connect to database
 try {
-   $pdo = new PDO ($dsn, $user, $password); 
-   $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+   // Use $pass here to match the variable defined above
+   $pdo = new PDO($dsn, $user, $pass); 
+   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    echo "<p> Database Connected! </p>"; 
 }
-//what happends when theres a error
+// What happens when there is an error
 catch(PDOException $e) {
     die("Database connection failed: " . $e->getMessage()); 
 }
-
 ?>
